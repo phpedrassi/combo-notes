@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+:root {
+    --primary-color: rgb(13, 106, 134);
+    --primary-color-darker: rgb(9, 48, 56);
+    --comando-color-back: #535d67;
+    --aba-color-back: #53ffd4;
+}
+
+* {
+    box-sizing: border-box;
+    outline: 0;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--primary-color);
+    font-family: 'Open sans', sans-serif;
+    font-size: 1.3em;
+    line-height: 1.5em;
+}
+
+nav {
+    width: 100%;
+}
+
+nav .abas {
+    display: flex;
+    justify-content: left;
+}
+
+.aba_kofxv,
+.aba_sf6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 50px;
+    background-color: var(--comando-color-back);
+    border-radius: 5px 0px 0px 5px;
+    color: var(--aba-color-back);
+    border: 2px solid white;
+    cursor: pointer;
+    margin: 0 .5rem;
+}
+
+.geral {
+    position: relative;
+}
+
+
+.container {
+    max-width: 640px;
+    margin: 50px 0;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-left: 15%;
+    flex: 1 1 0;
+}
+
+
+form input {
+    display: block;
+    width: 100%;
+}
+
+form input#input-titulo {
+    font-size: 2em;
+    height: 50px;
+    padding: 0 20px;
+    font-weight: bold;
+}
+
+form input#input-info {
+    font-size: 1.2em;
+    height: 30px;
+    padding: 15px 0;
+    padding-left: 30px;
+    margin-top: 0.1em;
+}
+
+form input:focus {
+    outline: 1px solid var(--primary-color);
+}
+
+.menu {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+}
+
+.container button {
+    border: none;
+    background: var(--primary-color);
+    color: var(--aba-color-back);
+    font-size: 1em;
+    cursor: pointer;
+    height: 50px;
+    margin: auto;
+    min-width: 100px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.container .btnImp {
+    background: #bbbbbb;
+    color: var(--primary-color-darker);
+    border-radius: 25px;
+}
+
+.container button:hover {
+    background: var(--primary-color-darker);
+
+}
+
+.container .btnImp:hover {
+    background: #535d67;
+    color: #bbbbbb;
+}
+
+
+.comando {
+    min-height: 30px;
+    border: 1px solid var(--primary-color-darker);
+    margin: 0.5em 0;
+    background: var(--comando-color-back);
+    display: flex;
+    overflow-x: hidden;
+}
+
+.comma {
+    cursor: pointer;
+
+}
+
+
+.side-bar {
+    top: 0;
+    right: 0px;
+    position: fixed;
+}
+
+
+.paleta {
+    width: 640px;
+    height: 40em;
+    margin: 50px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px 0 0 10px;
+}
+
+.sf6_box,
+.kofxv_box,
+.tk8_box,
+.gbfvr_box,
+.mk1_box {
+    position: absolute;
+
+}
+
+.botoes_jogo {
+    position: absolute;
+
+}
+
+.jogo {
+    width: 10em;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+
+/* Responsividade */
+@media(max-width: 1500px){
+    .container {
+        margin-left: 5%;
+    }
+    
+}
+
+@media(max-width: 1350px){
+    .side-bar {
+        width: 25rem;
+    }
+    
+}
+
+@media(max-width: 1025px){
+    .side-bar {
+        width: 100%;
+        bottom: 0px;
+        top: auto;
+    }
+
+    .paleta {
+        width: 100%;
+        height: 25rem;
+        margin: 0;
+        border-radius: 10px 10px 0 0;
+    }
+    
+}
+
+/* Imprimir ou Salvar */
+@media print {
+    body {
+        margin: 0mm 0mm 0mm 0mm;
+    }
+
+    nav,
+    .side-bar,
+    .menu {
+        display: none;
+    }
+
+    .container_abrir {
+        margin: 50px auto;
+    }
+
+    .container {
+        margin: 0px auto;
+    }
+
+    .lista {
+        width: 130mm;
+    }
+
+    .comma {
+        height: 16mm;
+    }
+
+    .comando {
+        margin-top: 2mm;
+        margin-bottom: 0;
+    }
+
+    form input {
+        border: none;
+    }
+}
