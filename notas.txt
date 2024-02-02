@@ -1,8 +1,0 @@
-
--formatar para impressão(diminuir o tamanho para caber mais na página. Fazer quebrar em duas colunas quando passar de certo tamanho)
-
--responsível (em tela pequena, colocar a aba em baixo. A parte dos comandos fica mais distribuido)
-
--se não colocar título, quando imprimir ele coloca o nome do jogo
-
--aumentar a div de comandos se ela passar do limite horizontal
