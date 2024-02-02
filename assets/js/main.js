@@ -4,14 +4,15 @@
     const seq = []
     seq.push(document.querySelector('.comando'));
     let divAtual = seq[index];
-    const side_bar = document.querySelector('.side-bar')
-    const container = document.querySelector('.container')
+    const root = document.querySelector(':root')
+    const body = document.querySelector('body')
+    const btns = document.querySelector('.container button')
+    const btnIcon = document.querySelector('.container button i')
     const botoesKOFXV = document.querySelector('.kofxv_box')
     const botoesSF6 = document.querySelector('.sf6_box')
+    const botoesAll = document.querySelectorAll(".comma-box")
     let tituloPagina = document.querySelector('#input-titulo')
 
-    //botoesComma = kofxv_box
-    //botoesJogo = sf6_box
 
     document.addEventListener('mouseup', function (e) {
         let el = e.target;
@@ -28,10 +29,13 @@
         if (alvo.classList.contains('btnPrevious')) {
             previousDiv()
         }
-        if (alvo.classList.contains('aba_kofxv')) {
+        if (alvo.classList.contains('btnBack')) {
+            previousImg()
+        }
+        if (alvo.classList.contains('aba_kofxv') || alvo.classList.contains('kofxvImg')) {
             abrirKOFXV()
         }
-        if (alvo.classList.contains('aba_sf6')) {
+        if (alvo.classList.contains('aba_sf6') || alvo.classList.contains('sf6Img')) {
             abrirSF6()
         }
         if (alvo.classList.contains('btnImp')) {
@@ -61,12 +65,10 @@
         if (seq.length > 0) {
             let slot = img.cloneNode(true);
             divAtual.appendChild(slot);
-            console.log(seq)
         } else {
             nextDiv()
             let slot = img.cloneNode(true);
             divAtual.appendChild(slot);
-            console.log(seq)
         }
     }
 
@@ -77,9 +79,7 @@
         seq.push(newDiv);
         index++
         divAtual = seq[index]
-        // if (seq.length >= 12) {
-
-        // }
+        window.scrollTo(0, document.body.scrollHeight)
     }
 
     function previousDiv() {
@@ -100,17 +100,31 @@
     }
 
     function abrirKOFXV() {
-        botoesSF6.classList.add('hidden')
-        if (botoesKOFXV.classList.contains('hidden')) {
-            botoesKOFXV.classList.remove('hidden')
-        }
+
+        botoesAll.forEach((box) => {
+            box.classList.add("hidden")
+        })
+        botoesKOFXV.classList.remove('hidden')
+        
+        root.style.setProperty("--tema1", "var(--kofxv-primary)")
+        root.style.setProperty("--tema2", "var(--kofxv-second)")
+        root.style.setProperty("--tema3", "var(--kofxv-terc)")
+        root.style.setProperty("--tema4", "var(--kofxv-quarto)")
+        
+
     }
 
     function abrirSF6() {
-        botoesKOFXV.classList.add('hidden')
-        if (botoesSF6.classList.contains('hidden')) {
-            botoesSF6.classList.remove('hidden')
-        }
+
+        botoesAll.forEach((box) => {
+            box.classList.add("hidden")
+        })
+        botoesSF6.classList.remove('hidden')
+
+        root.style.setProperty("--tema1", "var(--sf6-primary)")
+        root.style.setProperty("--tema2", "var(--sf6-second)")
+        root.style.setProperty("--tema3", "var(--sf6-terc)")
+        root.style.setProperty("--tema4", "var(--sf6-quarto)")
     }
 
 

@@ -7,6 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Combo Notes</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="./assets/img/favicon.png" />
+
 </head>
 
 <body>
@@ -14,10 +19,10 @@
     <nav>
         <div class="abas">
             <div class="aba_sf6">
-                SF6
+                <img src="./assets/img/jgs/logo02.png" alt="aba do Street Fighter 6" class="sf6Img">
             </div>
             <div class="aba_kofxv">
-                KOFXV
+                <img src="./assets/img/jgs/logo01.png" alt="aba do Street Fighter 6" class="kofxvImg">
             </div>
         </div>
     </nav>
@@ -37,17 +42,28 @@
                 </div>
             </div>
             <div class="menu">
-                <button class="btnImp">Imprimir</button>
-                <button class="btnPrevious"><img src="./assets/img/ButtonIcon.png" class="btnPrevious"></button>
-                <button class="btnNext"><img src="./assets/img/ButtonIcon2.png" class="btnNext"></button>
+                <button class="btnImp">Salvar</button>
+                <button class="btnPrevious">
+                    <i class="fa-solid fa-angles-left fa-rotate-90 fa-2xl"></i>
+                </button>
+                <button class="btnNext">
+                    <i class="fa-solid fa-angles-left fa-rotate-270 fa-2xl"></i>
+                </button>
+                <button class="btnBack">
+                    <i class="fa-solid fa-delete-left fa-xl"></i>
+                </button>
             </div>
+
+
         </div>
+
+        <div class="middle"></div>
 
 
         <div class="side-bar">
-
+            <div class="paleta-left"></div>
             <div class="paleta">
-                <div class="kofxv_box botoes_comma hidden">
+                <div class="kofxv_box comma-box hidden">
                     <img class="comma" class="kofxv" src="./assets/img/cmd_kof/99_cmd_010.png">
                     <img class="comma" class="kofxv" src="./assets/img/cmd_kof/99_cmd_011.png">
                     <img class="comma" class="kofxv" src="./assets/img/cmd_kof/99_cmd_012.png">
@@ -83,7 +99,7 @@
                     <img class="comma" class="kofxv" src="./assets/img/cmd_kof/99_cmd_034.png" title="Repetidamente">
                     <img class="comma" class="kofxv" src="./assets/img/cmd_kof/99_cmd_041.png" title="Continua...">
                 </div>
-                <div class="sf6_box">
+                <div class="sf6_box comma-box">
                     <img class="comma" class="sf6" src="./assets/img/cmd_sf6/cmd_01.png">
                     <img class="comma" class="sf6" src="./assets/img/cmd_sf6/cmd_02.png">
                     <img class="comma" class="sf6" src="./assets/img/cmd_sf6/cmd_03.png">
@@ -114,13 +130,16 @@
                     <img class="comma" class="sf6" src="./assets/img/cmd_sf6/cmd_28.png" title="Segurar">
 
                 </div>
-                <div class="tk8_box hidden">
+                <div class="tk8_box comma-box hidden">
 
                 </div>
-                <div class="gbfvr_box hidden">
+                <div class="gbfvr_box comma-box hidden">
 
                 </div>
-                <div class="mk1_box hidden">
+                <div class="mk1_box comma-box hidden">
+
+                </div>
+                <div class="pocket_box comma-box hidden">
 
                 </div>
 
@@ -132,8 +151,8 @@
                     <img class="jogo jogo_gbfvr" src="./assets/img/jgs/logo04.png" title="Granblue Fantasy Versus Rise">
                     <img class="jogo jogo_mk1" src="./assets/img/jgs/logo05.png" title="Mortal Kombat 1">
                 </div> -->
-
             </div>
+
         </div>
 
 

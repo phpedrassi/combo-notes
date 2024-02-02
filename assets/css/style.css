@@ -1,10 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 
 :root {
-    --primary-color: rgb(13, 106, 134);
     --primary-color-darker: rgb(9, 48, 56);
-    --comando-color-back: #535d67;
-    --aba-color-back: #53ffd4;
+
+
+    --kofxv-primary: rgb(13, 106, 134);
+    --kofxv-second: #53ffd4;
+    --kofxv-terc: #535d67;
+    --kofxv-quarto: rgb(9, 48, 56);
+
+    --sf6-primary: #370587;
+    --sf6-second: #c82bca;
+    --sf6-terc: #a781b8;
+    --sf6-quarto: #1f0d3b;
+
+
+    --tema1: var(--sf6-primary);
+    --tema2: var(--sf6-second);
+    --tema3: var(--sf6-terc);
+    --tema4: var(--sf6-quarto)
 }
 
 * {
@@ -16,7 +30,7 @@
 body {
     margin: 0;
     padding: 0;
-    background: var(--primary-color);
+    background: var(--tema1);
     font-family: 'Open sans', sans-serif;
     font-size: 1.3em;
     line-height: 1.5em;
@@ -36,30 +50,81 @@ nav .abas {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 170px;
-    height: 50px;
-    background-color: var(--comando-color-back);
+    width: 10.625rem;
+    height: 3.125rem;
+    background-color: var(--tema3);
     border-radius: 5px 0px 0px 5px;
-    color: var(--aba-color-back);
+    color: var(--kofxv-second);
     border: 2px solid white;
     cursor: pointer;
     margin: 0 .5rem;
 }
 
+.aba_kofxv img,
+.aba_sf6 img {
+    width: 5rem;
+}
+
+
+
+
+
+/* ////////////////////////////////////////////////////////////////////// */
+
+
+
+
 .geral {
-    position: relative;
+    /* position: relative; */
+    display: flex;
+    justify-content: center;
 }
 
 
 .container {
-    max-width: 640px;
-    margin: 50px 0;
+    margin: 3.125rem 0;
+    min-width: 40rem;
+    max-width: 40rem;
     background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    margin-left: 15%;
-    flex: 1 1 0;
+    padding: 1.25rem;
+    border-radius: 0.625rem;
 }
+
+
+.middle {
+    width: 40rem;
+    /* background-color: #53ffd4; */
+    
+}
+
+
+.side-bar {
+    display: flex;
+    position: fixed;
+    right: 0;
+}
+
+.paleta {
+    background: #fff;
+    border-radius: 10px;
+    max-width: 33.75rem;
+    display: flex;
+    padding: 1.25rem;
+    flex-wrap: wrap;
+    max-height: calc(100vh - 50px);
+    overflow: auto;
+}
+
+.paleta-left {
+    min-width: 40.125rem;
+    z-index: 0;
+    /* background-color: rgba(0, 200, 0, 0.5); */
+}
+
+
+
+
+/* //////////////////////////////////////////////////////// */
 
 
 form input {
@@ -69,21 +134,21 @@ form input {
 
 form input#input-titulo {
     font-size: 2em;
-    height: 50px;
-    padding: 0 20px;
+    height: 3.125rem;
+    padding: 0 1.25rem;
     font-weight: bold;
 }
 
 form input#input-info {
     font-size: 1.2em;
-    height: 30px;
-    padding: 15px 0;
-    padding-left: 30px;
-    margin-top: 0.1em;
+    height: 1.875rem;
+    padding: 0.938rem 0;
+    padding-left: 1.875rem;
+    margin-top: 0.1rem;
 }
 
 form input:focus {
-    outline: 1px solid var(--primary-color);
+    outline: 1px solid var(--kofxv-primary);
 }
 
 .menu {
@@ -95,25 +160,31 @@ form input:focus {
 
 .container button {
     border: none;
-    background: var(--primary-color);
-    color: var(--aba-color-back);
+    background: var(--tema1);
     font-size: 1em;
     cursor: pointer;
-    height: 50px;
+    height: 3.125rem;
     margin: auto;
-    min-width: 100px;
+    min-width: 6.25rem;
     border-radius: 5px;
-    padding: 5px;
+    padding: 0.313rem;
+    z-index: 2;
+}
+
+.container button i {
+    color: var(--tema2);
+    pointer-events: none;
+    /* não deixa de funcionar qnd clica no ícone */
 }
 
 .container .btnImp {
     background: #bbbbbb;
-    color: var(--primary-color-darker);
+    color: var(--tema4);
     border-radius: 25px;
 }
 
 .container button:hover {
-    background: var(--primary-color-darker);
+    background: var(--tema4);
 
 }
 
@@ -124,10 +195,10 @@ form input:focus {
 
 
 .comando {
-    min-height: 30px;
-    border: 1px solid var(--primary-color-darker);
+    min-height: 1.875rem;
+    border: 1px solid var(--tema4);
     margin: 0.5em 0;
-    background: var(--comando-color-back);
+    background: var(--tema3);
     display: flex;
     overflow-x: hidden;
 }
@@ -138,30 +209,12 @@ form input:focus {
 }
 
 
-.side-bar {
-    top: 0;
-    right: 0px;
-    position: fixed;
-}
 
 
-.paleta {
-    width: 640px;
-    height: 40em;
-    margin: 50px auto;
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px 0 0 10px;
-}
 
-.sf6_box,
-.kofxv_box,
-.tk8_box,
-.gbfvr_box,
-.mk1_box {
-    position: absolute;
 
-}
+
+
 
 .botoes_jogo {
     position: absolute;
@@ -169,46 +222,51 @@ form input:focus {
 }
 
 .jogo {
-    width: 10em;
+    width: 10rem;
     cursor: pointer;
-    margin: 10px;
+    margin: 0.625rem;
 }
 
 .hidden {
-    visibility: hidden;
+    display: none;
 }
 
 
 /* Responsividade */
-@media(max-width: 1500px){
-    .container {
-        margin-left: 5%;
-    }
-    
+@media(max-width: 962px){
+
+.middle,
+.paleta-left {
+    display: none;
 }
 
-@media(max-width: 1350px){
-    .side-bar {
-        width: 25rem;
-    }
-    
+.side-bar {
+    right: auto;
+    bottom: 0;
+    width: 100%;
+    max-height: 40%;
 }
 
-@media(max-width: 1025px){
-    .side-bar {
-        width: 100%;
-        bottom: 0px;
-        top: auto;
-    }
-
-    .paleta {
-        width: 100%;
-        height: 25rem;
-        margin: 0;
-        border-radius: 10px 10px 0 0;
-    }
-    
+.paleta {
+    max-width: 100%;
 }
+
+.container {
+    margin-bottom: 42vh;
+}
+
+.container button {
+    z-index: 0;
+}
+   
+}
+
+
+
+
+
+
+
 
 /* Imprimir ou Salvar */
 @media print {
