@@ -45,12 +45,11 @@ nav .abas {
     justify-content: left;
 }
 
-.aba_kofxv,
-.aba_sf6 {
+.aba {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 10.625rem;
+    /* width: 10.625rem; */
     height: 3.125rem;
     background-color: var(--tema3);
     border-radius: 5px 0px 0px 5px;
@@ -60,9 +59,18 @@ nav .abas {
     margin: 0 .5rem;
 }
 
-.aba_kofxv img,
-.aba_sf6 img {
+.aba_selec {
+    height: 4rem
+}
+
+
+
+.aba img {
     width: 5rem;
+}
+
+.aba_selec img {
+    width: 7rem;
 }
 
 
@@ -261,6 +269,70 @@ form input:focus {
    
 }
 
+@media(max-width: 639px) {
+
+    .aba {
+        height: 8vw;
+        margin: 0 1vw;
+    }
+    
+    .aba_selec {
+        height: 12vw;
+    }
+    
+    .aba img {
+        width: 13vw;
+    }
+    
+    .aba_selec img {
+        width: 18vw;
+    }
+
+
+
+    .side-bar {
+        left: 0;
+        right: 0;
+    }
+
+    .paleta {
+        padding: 3vw;
+    }
+
+    .comma {
+        width: 10vw;
+    }
+
+    .container {
+        min-width: 100vw;
+        padding: 3vw;
+    }
+
+    .container button {
+        font-size: 3vw;
+        height: 8vw;
+        min-width: 15vw;
+    }
+
+    form input#input-titulo {
+        font-size: 2em;
+        height: 8vw;
+        padding: 0 2vw;
+    }
+    
+    form input#input-info {
+        font-size: 1.2em;
+        height: 4vw;
+        padding: 2vw 0;
+        padding-left: 3vw;
+        margin-top: 0.1rem;
+    }
+
+    body {
+        font-size: 3vw;
+    }
+
+}
 
 
 

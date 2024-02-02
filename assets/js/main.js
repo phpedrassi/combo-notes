@@ -11,6 +11,10 @@
     const botoesKOFXV = document.querySelector('.kofxv_box')
     const botoesSF6 = document.querySelector('.sf6_box')
     const botoesAll = document.querySelectorAll(".comma-box")
+    const allAbas = document.querySelectorAll(".aba")
+    const abaSf6 = document.querySelector(".aba_sf6")  
+    const abaKofxv = document.querySelector(".aba_kofxv")  
+
     let tituloPagina = document.querySelector('#input-titulo')
 
 
@@ -33,10 +37,10 @@
             previousImg()
         }
         if (alvo.classList.contains('aba_kofxv') || alvo.classList.contains('kofxvImg')) {
-            abrirKOFXV()
+            abrirKOFXV(alvo)
         }
         if (alvo.classList.contains('aba_sf6') || alvo.classList.contains('sf6Img')) {
-            abrirSF6()
+            abrirSF6(alvo)
         }
         if (alvo.classList.contains('btnImp')) {
             document.title = tituloPagina.value
@@ -99,12 +103,19 @@
         }
     }
 
-    function abrirKOFXV() {
+    function abrirKOFXV(alvo) {
 
         botoesAll.forEach((box) => {
             box.classList.add("hidden")
         })
         botoesKOFXV.classList.remove('hidden')
+
+        allAbas.forEach((aba) => {
+            aba.classList.remove("aba_selec")
+        })
+        abaKofxv.classList.add("aba_selec")
+        console.log(alvo)
+
         
         root.style.setProperty("--tema1", "var(--kofxv-primary)")
         root.style.setProperty("--tema2", "var(--kofxv-second)")
@@ -114,12 +125,17 @@
 
     }
 
-    function abrirSF6() {
+    function abrirSF6(alvo) {
 
         botoesAll.forEach((box) => {
             box.classList.add("hidden")
         })
         botoesSF6.classList.remove('hidden')
+
+        allAbas.forEach((aba) => {
+            aba.classList.remove("aba_selec")
+        })
+        abaSf6.classList.add("aba_selec")
 
         root.style.setProperty("--tema1", "var(--sf6-primary)")
         root.style.setProperty("--tema2", "var(--sf6-second)")
