@@ -14,6 +14,11 @@
     --sf6-terc: #a781b8;
     --sf6-quarto: #1f0d3b;
 
+    --tk8-primary: #0f1f2c;
+    --tk8-second: #f40c65;
+    --tk8-terc: #283040;
+    --tk8-quarto: #070e14;
+
 
     --tema1: var(--sf6-primary);
     --tema2: var(--sf6-second);

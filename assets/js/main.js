@@ -10,10 +10,13 @@
     const btnIcon = document.querySelector('.container button i')
     const botoesKOFXV = document.querySelector('.kofxv_box')
     const botoesSF6 = document.querySelector('.sf6_box')
+    const botoesTK8 = document.querySelector('.tk8_box')
+
     const botoesAll = document.querySelectorAll(".comma-box")
     const allAbas = document.querySelectorAll(".aba")
     const abaSf6 = document.querySelector(".aba_sf6")  
     const abaKofxv = document.querySelector(".aba_kofxv")  
+    const abaTk8 = document.querySelector(".aba_tk8")  
 
     let tituloPagina = document.querySelector('#input-titulo')
 
@@ -41,6 +44,9 @@
         }
         if (alvo.classList.contains('aba_sf6') || alvo.classList.contains('sf6Img')) {
             abrirSF6(alvo)
+        }
+        if (alvo.classList.contains('aba_tk8') || alvo.classList.contains('tk8Img')) {
+            abrirTK8(alvo)
         }
         if (alvo.classList.contains('btnImp')) {
             document.title = tituloPagina.value
@@ -143,6 +149,23 @@
         root.style.setProperty("--tema4", "var(--sf6-quarto)")
     }
 
+    function abrirTK8(alvo) {
+
+        botoesAll.forEach((box) => {
+            box.classList.add("hidden")
+        })
+        botoesTK8.classList.remove('hidden')
+
+        allAbas.forEach((aba) => {
+            aba.classList.remove("aba_selec")
+        })
+        abaTk8.classList.add("aba_selec")
+
+        root.style.setProperty("--tema1", "var(--tk8-primary)")
+        root.style.setProperty("--tema2", "var(--tk8-second)")
+        root.style.setProperty("--tema3", "var(--tk8-terc)")
+        root.style.setProperty("--tema4", "var(--tk8-quarto)")
+    }
 
 
 
