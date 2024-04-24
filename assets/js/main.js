@@ -30,6 +30,10 @@
         if (alvo.classList.contains('comma')) {
             addImg(alvo)
         }
+        if (alvo.classList.contains('txt')) {
+            addTxt()
+        }
+
         if (alvo.classList.contains('btnNext')) {
             nextDiv()
         }
@@ -75,6 +79,27 @@
         if (seq.length > 0) {
             let slot = img.cloneNode(true);
             divAtual.appendChild(slot);
+        } else {
+            nextDiv()
+            let slot = img.cloneNode(true);
+            divAtual.appendChild(slot);
+        }
+    }
+
+    function addTxt() {
+        if (seq.length > 0) {
+
+            let newTxt = document.createElement('p');
+            let newSpn = document.createElement('span');
+            newSpn.setAttribute('role', 'textbox')
+            newSpn.setAttribute('contenteditable','')
+            newSpn.innerText = 'text'
+            newTxt.classList.add("txt-p")
+            newSpn.classList.add("txt-after")
+            console.log(newTxt)
+            // let slot = img.cloneNode(true);
+            divAtual.appendChild(newTxt);
+            newTxt.appendChild(newSpn);
         } else {
             nextDiv()
             let slot = img.cloneNode(true);

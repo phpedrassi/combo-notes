@@ -214,11 +214,26 @@ form input:focus {
     background: var(--tema3);
     display: flex;
     overflow-x: hidden;
+    align-items: center;
 }
 
-.comma {
+.comma,
+.txt {
     cursor: pointer;
 
+}
+
+.txt-p {
+    margin: 0;
+}
+
+.txt-after {
+    width: 100px;
+    background: none;
+    border: 1px solid #ffffff;
+    color: white;
+    font-size: 2rem;
+    margin: 0;
 }
 
 
@@ -243,6 +258,22 @@ form input:focus {
 .hidden {
     display: none;
 }
+
+
+
+
+
+
+/* .btn-atk {
+    width: 64px;
+} */
+
+.btn-dia {
+    width: 100px;
+}
+
+
+
 
 
 /* Responsividade */
