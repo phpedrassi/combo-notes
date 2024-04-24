@@ -263,11 +263,6 @@ form input:focus {
 
 
 
-
-/* .btn-atk {
-    width: 64px;
-} */
-
 .btn-dia {
     width: 100px;
 }
@@ -411,5 +406,9 @@ form input:focus {
 
     form input {
         border: none;
+    }
+
+    .txt-after {
+        color: black;
     }
 }
