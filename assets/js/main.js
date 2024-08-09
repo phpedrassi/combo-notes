@@ -11,12 +11,14 @@
     const botoesKOFXV = document.querySelector('.kofxv_box')
     const botoesSF6 = document.querySelector('.sf6_box')
     const botoesTK8 = document.querySelector('.tk8_box')
+    const botoesXKO = document.querySelector('.xko_box')
 
     const botoesAll = document.querySelectorAll(".comma-box")
     const allAbas = document.querySelectorAll(".aba")
     const abaSf6 = document.querySelector(".aba_sf6")  
     const abaKofxv = document.querySelector(".aba_kofxv")  
     const abaTk8 = document.querySelector(".aba_tk8")  
+    const abaXKO = document.querySelector(".aba_xko")  
 
     let tituloPagina = document.querySelector('#input-titulo')
 
@@ -52,6 +54,11 @@
         if (alvo.classList.contains('aba_tk8') || alvo.classList.contains('tk8Img')) {
             abrirTK8(alvo)
         }
+        //////////////////////
+        if (alvo.classList.contains('aba_xko') || alvo.classList.contains('xkoImg')) {
+            abrirXKO(alvo)
+        }
+        ///////////////////////
         if (alvo.classList.contains('btnImp')) {
             document.title = tituloPagina.value
             window.print()
@@ -191,6 +198,25 @@
         root.style.setProperty("--tema3", "var(--tk8-terc)")
         root.style.setProperty("--tema4", "var(--tk8-quarto)")
     }
+
+    function abrirXKO(alvo) {
+
+        botoesAll.forEach((box) => {
+            box.classList.add("hidden")
+        })
+        botoesXKO.classList.remove('hidden')
+
+        allAbas.forEach((aba) => {
+            aba.classList.remove("aba_selec")
+        })
+        abaXKO.classList.add("aba_selec")
+
+        root.style.setProperty("--tema1", "var(--xko-primary)")
+        root.style.setProperty("--tema2", "var(--xko-second)")
+        root.style.setProperty("--tema3", "var(--xko-terc)")
+        root.style.setProperty("--tema4", "var(--xko-quarto)")
+    }
+
 
 
 
