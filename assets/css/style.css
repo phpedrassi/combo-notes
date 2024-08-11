@@ -112,7 +112,7 @@ nav .abas {
 .middle {
     width: 40rem;
     /* background-color: #53ffd4; */
-    
+
 }
 
 
@@ -277,32 +277,32 @@ form input:focus {
 
 
 /* Responsividade */
-@media(max-width: 962px){
+@media(max-width: 962px) {
 
-.middle,
-.paleta-left {
-    display: none;
-}
+    .middle,
+    .paleta-left {
+        display: none;
+    }
 
-.side-bar {
-    right: auto;
-    bottom: 0;
-    width: 100%;
-    max-height: 40%;
-}
+    .side-bar {
+        right: auto;
+        bottom: 0;
+        width: 100%;
+        max-height: 40%;
+    }
 
-.paleta {
-    max-width: 100%;
-}
+    .paleta {
+        max-width: 100%;
+    }
 
-.container {
-    margin-bottom: 42vh;
-}
+    .container {
+        margin-bottom: 42vh;
+    }
 
-.container button {
-    z-index: 0;
-}
-   
+    .container button {
+        z-index: 0;
+    }
+
 }
 
 @media(max-width: 639px) {
@@ -311,15 +311,15 @@ form input:focus {
         height: 8vw;
         margin: 0 1vw;
     }
-    
+
     .aba_selec {
         height: 12vw;
     }
-    
+
     .aba img {
         width: 13vw;
     }
-    
+
     .aba_selec img {
         width: 18vw;
     }
@@ -336,7 +336,16 @@ form input:focus {
     }
 
     .comma {
-        width: 10vw;
+        /* width: 10vw; */
+        height: 10.5vw;
+    }
+
+    .txt {
+        height: 10.5vw;
+    }
+
+    .txt-after {
+        font-size: 5vw;
     }
 
     .container {
@@ -355,7 +364,7 @@ form input:focus {
         height: 8vw;
         padding: 0 2vw;
     }
-    
+
     form input#input-info {
         font-size: 1.2em;
         height: 4vw;
